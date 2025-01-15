@@ -1,5 +1,6 @@
 import React from 'react';
 import '../assets/styles/Navbar.css';
+// import { NavLink } from 'react-router';
 
 const Navbar: React.FC = () => {
     return (
@@ -14,10 +15,12 @@ const Navbar: React.FC = () => {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav mx-auto">
                         <li className="nav-item">
-                            <a className="nav-link" href="/beers">Bières</a>
+                            {/* <NavLink to="/">Bières</NavLink> */}
+                            <a className="nav-link" href="/">Bières</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/breweries">Brasserie</a>
+                        {/* <NavLink to="/">Brasserie</NavLink> */}
+                            <a className="nav-link" href="/breweries">Brasseries</a>
                         </li>
                     </ul>
 

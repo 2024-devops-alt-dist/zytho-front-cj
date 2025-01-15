@@ -1,0 +1,16 @@
+.cust-title-beer {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+span {
+    font-weight: 700;
+}
+
+.alc-cust {
+    font-size: 35px;
+}
+
+.pourcent, .alc-cust {
+    font-weight: bold;
+}

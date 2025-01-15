@@ -1,18 +1,12 @@
 .card {
-    width: 300px; /* Largeur de chaque carte */
-    height: 350px; /* Hauteur de chaque carte */
-    transition: transform 0.2s ease; /* Animation pour l'effet de survol */
+    width: 350px;
+    height: 350px;
+    transition: transform 0.2s ease;
 }
 
 .card:hover {
-    transform: scale(1.05); /* Agrandissement au survol */
+    transform: scale(1.05);
 }
-
-/* .card img {
-    width: 100%; 
-    height: 180px; 
-    object-fit: cover; 
-  } */
 
 .card-text {
     padding : 0;
