@@ -24,7 +24,6 @@ const BreweryList: React.FC = () => {
     
     return (
         <>
-        <Link to="/">Retour</Link>
         <div className="container my-4" style={{ border: '2px solid blue' }}>
             <h1 className="text-center custon-txt">Liste des Brasseries</h1>
             

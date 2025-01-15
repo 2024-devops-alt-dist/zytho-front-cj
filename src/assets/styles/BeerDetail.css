@@ -14,3 +14,30 @@ span {
 .pourcent, .alc-cust {
     font-weight: bold;
 }
+
+.name-brewery {
+    color: rgb(45, 43, 43);
+}
+
+.name-brewery:hover {
+    color: rgb(200, 132, 4);
+}
+
+.mb-cust {
+    margin: 30px 0 60px 0;
+}
+
+.test {
+    padding-left: 35px;
+}
+
+@media screen and (max-width: 992px) {
+    .test {
+        padding-left: 0;
+    }
+
+    .space-mob {
+        margin-top: 25px;
+        flex-direction: column;
+    }
+}

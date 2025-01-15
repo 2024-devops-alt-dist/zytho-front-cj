@@ -1,3 +1,19 @@
 .custom-bg-navbar {
-    background-color: rgba(151, 67, 2, 0.34);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.12)
+}
+
+.nav-link.active {
+    color: rgb(207, 90, 1) !important;
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.logo-custom {
+    width: 180px;
 }

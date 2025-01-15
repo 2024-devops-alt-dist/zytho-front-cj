@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../assets/styles/BeerList.css';
+import '../assets/styles/Global.css';
 import '../App.css'
 import { Beer } from '../interfaces/beer';
 import { getBeers } from '../services/api';
@@ -24,11 +25,14 @@ const BeerList: React.FC = () => {
 
     return (
         <>
-        <Link to="/">Retour</Link>
-        <div className="container my-4" style={{ border: '2px solid blue' }}>
-            <h1 className="text-center custon-txt">Liste des Bières Artisanales</h1>
+        {/* <div>
+            <Link to="/">Retour</Link>
+        </div> */}
+        
+        <div className="container my-5">
+            <h1 className="text-center custon-txt">Liste des Bières</h1>
             
-            <div className="row justify-content-center" style={{ border: '2px solid green' }}>
+            <div className="row justify-content-center">
                 {beers && beers.length > 0 ? (
                     beers.map((beer) => (
                     <div key={beer.id} className="col-12 col-lg-4 mb-4 d-flex justify-content-center">
@@ -40,10 +44,11 @@ const BeerList: React.FC = () => {
                                     <div className="alcool-percent">{beer.alcool_pourcent}% alc.</div>
                                 </div>
                                 <div>
+                                    <p>Type : Bière {beer.type}</p>
                                     <p>{beer.details_beer?.description || 'Pas de description disponible'}</p>
                                 </div>
-                                <Link to={`/beers/${beer.id}`} className="btn btn-primary mt-3">
-                                            Voir plus
+                                <Link to={`/beers/${beer.id}`} className="btn btn-one mt-3">
+                                    Voir plus
                                 </Link>
                             </div>
                         </div>

@@ -1,3 +1,5 @@
+import { Beer } from "./beer";
+
 export interface Brewery {
     id: number;
     name: string;
@@ -6,4 +8,5 @@ export interface Brewery {
     description?: string;
     schedules?: string;
     url_social_media?: string;
+    beers?: Beer[];
 }
