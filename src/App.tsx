@@ -5,6 +5,7 @@ import BeerList from './pages/BeerList'
 import { Routes, Route } from 'react-router'
 import BeerDetail from './pages/BeerDetail'
 import BreweryList from './pages/BreweryList'
+import BreweryDetails from './pages/BreweryDetails'
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
       <Route path="/" element={<BeerList />} />
       <Route path="/beers/:id" element={<BeerDetail />} />
       <Route path="/breweries" element={<BreweryList />} />
+      <Route path="/breweries/:id" element={<BreweryDetails />} />
+
     </Routes>
       
     <div>

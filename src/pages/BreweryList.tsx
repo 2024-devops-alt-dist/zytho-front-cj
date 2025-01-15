@@ -15,19 +15,13 @@ const BreweryList: React.FC = () => {
     const fetchBreweries = async () => {
         try {
             const response = await getBrewery();
-            console.log('Données récupérées :', response.data.breweries);
-            if (response.data.breweries && response.data.breweries.length > 0) {
-                setBreweries(response.data.breweries);
-            } else {
-                console.log('Aucune brasserie trouvée.');
-            }
+            setBreweries(response.data);
+            //console.log('Données récupérées :', response.data);
         } catch (error) {
             console.error('Erreur lors de la récupération des brasseries :', error);
         }
     };
     
-    
-
     return (
         <>
         <Link to="/">Retour</Link>
@@ -41,16 +35,9 @@ const BreweryList: React.FC = () => {
                         <div className="card h-100">
                             <img src="src/assets/pictures/brasseriePicture1.jpg" alt={breweries.name} className="card-img-top" />
                             <div className="card-body">
-                                <div className="d-flex justify-content-between align-items-center">
-                                    <h5 className="card-title">{breweries.name}</h5>
-                                    <div className="alcool-percent">{breweries.address}</div>
-                                </div>
-                                <div>
-                                    <p>{breweries.country || 'Pas de pays disponible'}</p>
-                                    <p>{breweries.description || 'Pas de description disponible'}</p>
-                                    <p>{breweries.schedules || 'Pas d\'horaires disponible'}</p>
-                                    <p>{breweries.url_social_media || 'Pas de réseaux sociaux disponible'}</p>
-                                </div>
+                                <h5 className="card-title">{breweries.name}</h5>
+                                <p>{breweries.country || 'Pas de pays disponible'}</p>
+                                <p>nombre de biere dispo : ??</p>
                                 <Link to={`/breweries/${breweries.id}`} className="btn btn-primary mt-3">
                                             Voir plus
                                 </Link>

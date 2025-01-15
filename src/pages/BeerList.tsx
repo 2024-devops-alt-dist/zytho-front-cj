@@ -15,7 +15,7 @@ const BeerList: React.FC = () => {
         try {
             const response = await getBeers();
             setBeers(response.data);
-            console.log("1-Bieres:", response.data); 
+            //console.log("1-Bieres:", response.data); 
         } catch (error) {
             console.error('Erreur lors de la récupération des bières :', error);
         }
