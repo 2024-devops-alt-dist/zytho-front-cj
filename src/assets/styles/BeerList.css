@@ -13,5 +13,33 @@
 }
 
 .custon-txt {
-    margin: 30px 0 45px 0;
+    margin: 65px 0 40px 0;
+}
+
+.cust-test {
+    margin: 25px 200px;
+}
+
+@media screen and (max-width: 1640px) {
+    .cust-test {
+        margin: 25px 130px;
+    }
+}
+
+@media screen and (max-width: 1338px) {
+    .cust-test {
+        margin: 25px 80px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .cust-test {
+        margin: 25px 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cust-mob-space {
+        margin-top: 10px;
+    }
 }
