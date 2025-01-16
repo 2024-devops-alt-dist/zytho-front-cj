@@ -16,7 +16,7 @@ const BreweryList: React.FC = () => {
         try {
             const response = await getBrewery();
             setBreweries(response.data);
-            //console.log('Données récupérées :', response.data);
+            console.log('Données récupérées :', response.data);
         } catch (error) {
             console.error('Erreur lors de la récupération des brasseries :', error);
         }
@@ -24,20 +24,20 @@ const BreweryList: React.FC = () => {
     
     return (
         <>
-        <div className="container my-4" style={{ border: '2px solid blue' }}>
-            <h1 className="text-center custon-txt">Liste des Brasseries</h1>
+        <div className="container my-4">
+            <h1 className="text-center custon-txt mt-5">Liste des Brasseries</h1>
             
-            <div className="row justify-content-center" style={{ border: '2px solid green' }}>
+            <div className="row justify-content-center">
                 {breweries && breweries.length > 0 ? (
-                    breweries.map((breweries) => (
-                    <div key={breweries.id} className="col-12 col-lg-4 mb-4 d-flex justify-content-center">
+                    breweries.map((brewery) => (
+                    <div key={brewery.id} className="col-12 col-lg-4 mb-4 d-flex justify-content-center">
                         <div className="card h-100">
-                            <img src="src/assets/pictures/brasseriePicture1.jpg" alt={breweries.name} className="card-img-top" />
+                            <img src="src/assets/pictures/brasseriePicture1.jpg" alt={brewery.name} className="card-img-top" />
                             <div className="card-body">
-                                <h5 className="card-title">{breweries.name}</h5>
-                                <p>{breweries.country || 'Pas de pays disponible'}</p>
-                                <p>nombre de biere dispo : ??</p>
-                                <Link to={`/breweries/${breweries.id}`} className="btn btn-primary mt-3">
+                                <h5 className="card-title">{brewery.name}</h5>
+                                <p>{brewery.country || 'Pas de pays disponible'}</p>
+                                <p>Bière(s) disponible(s) : {brewery.beers ? brewery.beers.length : 0}</p>
+                                <Link to={`/breweries/${brewery.id}`} className="btn btn-one mt-3">
                                             Voir plus
                                 </Link>
                             </div>

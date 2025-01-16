@@ -10,21 +10,27 @@ import BreweryDetails from './pages/BreweryDetails'
 function App() {
   return (
     <>
-    <div>
+    <div className="page-container">
+      {/* Navbar */}
+      <div>
         <Navbar />
-    </div>
+      </div>
 
-    <Routes>
-      <Route path="/" element={<BeerList />} />
-      <Route path="/beers/:id" element={<BeerDetail />} />
-      <Route path="/breweries" element={<BreweryList />} />
-      <Route path="/breweries/:id" element={<BreweryDetails />} />
+      {/* Routes */}
+      <div className="page-content">
+        <Routes>
+          <Route path="/" element={<BeerList />} />
+          <Route path="/beers/:id" element={<BeerDetail />} />
+          <Route path="/breweries" element={<BreweryList />} />
+          <Route path="/breweries/:id" element={<BreweryDetails />} />
+        </Routes>
+      </div>
 
-    </Routes>
-      
-    <div>
+      {/* Footer */}
+      <div>
         <Footer />
-    </div> 
+      </div>
+    </div>
     </>
   )
 }

@@ -1,0 +1,35 @@
+.card-custom {
+    width: 250px;
+    height: 350px;
+    transition: transform 0.2s ease;
+}
+
+.test4 {
+    margin-right: 30px;
+}
+
+.carousel-indicators li::marker {
+    content: '';
+}
+
+.beers-container {
+    /* border: 2px solid red; */
+    margin-top: 30px;
+    padding: 20px 50px;
+}
+
+.beers-list {
+    /* border: 2px solid blue;  */
+    gap: 16px; 
+    padding: 16px;
+    margin-bottom: 30px;
+    scrollbar-width: thin;
+    scrollbar-color: #555554 #ffffff52;
+}
+
+
+.beer-card {
+    flex: 0 0 auto;
+    width: 250px;
+    /* border: 2px solid green; */
+}

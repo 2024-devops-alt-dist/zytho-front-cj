@@ -38,7 +38,7 @@ const BeerDetails: React.FC = () => {
 
     return (
         <>
-        <div className="mt-4 px-5">
+        <div className="mt-5 px-5 mb-4">
             <Link to="/" className="mb-3 return-list"> {"<"} Retour à la liste</Link>
         </div>
         <div className="px-5">
@@ -81,8 +81,14 @@ const BeerDetails: React.FC = () => {
                 </div>
             </div>
         </div>
-        {/* Bières associées à la brasserie */}
-        <div className="px-5 bg-color-cust" style={{ border: '2px solid red' }}>
+       
+        </>
+    );
+};
+
+export default BeerDetails;
+ {/* Bières associées à la brasserie */}
+        {/* <div className="px-5 bg-color-cust" style={{ border: '2px solid red' }}>
             <div className="px-5" style={{ border: '2px solid blue' }}>
                     <h4 className="text-xl font-semibold mb-3">Bières associées de la brasserie</h4>
                     <div className="row">
@@ -100,9 +106,4 @@ const BeerDetails: React.FC = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-        </>
-    );
-};
-
-export default BeerDetails;
+            </div> */}

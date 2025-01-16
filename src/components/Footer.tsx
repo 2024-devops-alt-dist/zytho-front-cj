@@ -8,8 +8,8 @@ const Footer: React.FC = () => {
                 {/* <div>
                 contenu footer ici
                 </div> */}
-                <div className=" text-center custom-bg-footer">
-                    <p>&copy; 2025 Beer Catalog - Camille Janin. Tous droits réservés.</p>
+                <div className=" text-center custom-bg-footer py-2">
+                    <p className="test67">&copy; 2025 Beer Catalog - Camille Janin. Tous droits réservés.</p>
                 </div>
             </div>
         </footer>
