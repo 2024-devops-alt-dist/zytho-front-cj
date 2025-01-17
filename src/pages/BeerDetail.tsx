@@ -39,7 +39,7 @@ const BeerDetails: React.FC = () => {
     return (
         <>
         <div className="mt-5 px-5 mb-4">
-            <Link to="/" className="mb-3 return-list"> {"<"} Retour à la liste</Link>
+            <Link to="/beers" className="mb-3 return-list"> {"<"} Retour à la liste</Link>
         </div>
         <div className="px-5">
             <div className="row justify-content-between mb-cust px-5 " >

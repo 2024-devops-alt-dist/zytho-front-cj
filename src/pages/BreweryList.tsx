@@ -100,7 +100,7 @@ const BreweryList: React.FC = () => {
                                         className="card-img-top"
                                     />
                                     <div className="card-body">
-                                        <h5 className="card-title">{brewery.name}</h5>
+                                        <h5 className="card-title fs-cust">{brewery.name}</h5>
                                         <p>{brewery.country || 'Pas de pays disponible'}</p>
                                         <p>Bière(s) disponible(s) : {brewery.beers ? brewery.beers.length : 0}</p>
                                         <Link to={`/breweries/${brewery.id}`} className="btn btn-one mt-3">

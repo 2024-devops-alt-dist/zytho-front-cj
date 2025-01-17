@@ -1,0 +1,52 @@
+/* Conteneur principal */
+.contact-form-container {
+    height: calc(100vh - var(--header-height, 31px) - var(--footer-height, 60px));
+    display: flex;
+}
+
+/* Bloc gauche */
+.left-block {
+    position: relative;
+    flex: 1;
+}
+
+.left-block .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.left-block .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Bloc droit */
+.right-block {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-content {
+    width: 70%;
+}
+
+.ft-login {
+    font-weight: 600;
+}
+
+@media screen and (max-width: 900px) {
+    .d-none-img {
+        display: none;
+    }
+
+    .right-block {
+        padding: 0 20px;
+    }
+}

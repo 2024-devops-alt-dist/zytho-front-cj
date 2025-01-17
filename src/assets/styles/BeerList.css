@@ -20,6 +20,10 @@
     margin: 25px 200px;
 }
 
+.fs-cust {
+    font-size: 24px;
+}
+
 @media screen and (max-width: 1640px) {
     .cust-test {
         margin: 25px 130px;

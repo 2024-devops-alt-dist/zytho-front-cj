@@ -15,7 +15,8 @@ const Navbar: React.FC = () => {
 
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <div className="navbar-nav mx-auto">
-                        <NavLink to="/" className="nav-link">Bières</NavLink>
+                        <NavLink to="/" className="nav-link">Accueil</NavLink>
+                        <NavLink to="/beers" className="nav-link">Bières</NavLink>
                         <NavLink to="/breweries" className="nav-link">Brasserie</NavLink>
                     </div>
 
