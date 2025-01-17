@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
                 contenu footer ici
                 </div> */}
                 <div className=" text-center custom-bg-footer py-2">
-                    <p className="test67">&copy; 2025 Beer Catalog - Camille Janin. Tous droits réservés.</p>
+                    <p className="footer-marg text-white">&copy; 2025 Beer Catalog - Camille Janin. Tous droits réservés.</p>
                 </div>
             </div>
         </footer>

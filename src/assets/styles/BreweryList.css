@@ -1,0 +1,5 @@
+@media screen and (max-width: 575px) {
+    .filter-brewery-mob {
+        padding: 0 30px !important;
+    }
+}

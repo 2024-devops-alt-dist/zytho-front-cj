@@ -42,8 +42,8 @@ const BreweryDetails: React.FC = () => {
         <div className="mt-5 px-5 mb-4">
             <Link to="/breweries" className="mb-3 return-list"> {"<"} Retour à la liste</Link>
         </div>
-        <div className="px-5 py-4">
-            <div className="row justify-content-between mb-4 px-5">
+        <div className="px-5 pt-4 pb-1">
+            <div className="row justify-content-between mb-4 px-5 info-beer-mob">
                 <div className="col-lg-6">
                     <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
                         <ol className="carousel-indicators">
@@ -83,7 +83,7 @@ const BreweryDetails: React.FC = () => {
                     </div>
                 </div>
 
-                <div className="col-lg-6 test">
+                <div className="col-lg-6 info-beer-mob m-title-mob">
                     <div className="mb-3">
                         <div className="d-flex justify-content-between">
                             <h3 className="cust-title-beer">{brewery.name}</h3>

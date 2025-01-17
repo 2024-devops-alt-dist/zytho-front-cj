@@ -24,21 +24,27 @@ span {
 }
 
 .mb-cust {
-    margin: 30px 0 60px 0;
+    margin: 30px 0 50px 0;
 }
 
-.test {
+.info-beer-mob {
     padding-left: 35px;
 }
 
 @media screen and (max-width: 992px) {
-    .test {
-        padding-left: 0;
+    .info-beer-mob {
+        padding: 0px !important;
     }
 
     .space-mob {
         margin-top: 25px;
         flex-direction: column;
+    }
+
+    .m-title-mob {
+        margin-top: 20px;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
     }
 }
 

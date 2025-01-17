@@ -42,7 +42,7 @@ const BeerDetails: React.FC = () => {
             <Link to="/beers" className="mb-3 return-list"> {"<"} Retour à la liste</Link>
         </div>
         <div className="px-5">
-            <div className="row justify-content-between mb-cust px-5 " >
+            <div className="row justify-content-between mb-cust px-5 info-beer-mob" >
                 <div className="col-lg-6 " >
                     <img 
                         src="http://localhost:5173/src/assets/pictures/beersPicture1.jpg" 
@@ -52,7 +52,7 @@ const BeerDetails: React.FC = () => {
                 </div>
 
                 {/* Détails texte de la bière */}
-                <div className="col-lg-6 test" >
+                <div className="col-lg-6 info-beer-mob" >
                     <div className="mb-3">
                         <div className="d-flex justify-content-between space-mob">
                             <h3 className="cust-title-beer">{beer.name}</h3>
@@ -81,29 +81,8 @@ const BeerDetails: React.FC = () => {
                 </div>
             </div>
         </div>
-       
         </>
     );
 };
 
 export default BeerDetails;
- {/* Bières associées à la brasserie */}
-        {/* <div className="px-5 bg-color-cust" style={{ border: '2px solid red' }}>
-            <div className="px-5" style={{ border: '2px solid blue' }}>
-                    <h4 className="text-xl font-semibold mb-3">Bières associées de la brasserie</h4>
-                    <div className="row">
-                        <div className="col-md-3 mb-4">
-                            <div className="card">
-                                <img 
-                                    src="src/assets/pictures/beersPicture1.jpg"
-                                    alt="Bière associée" 
-                                    className="card-img-top"
-                                />
-                                <div className="card-body text-center">
-                                    <h5 className="card-title">{beer.name}</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> */}

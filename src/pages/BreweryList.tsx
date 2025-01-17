@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../assets/styles/BeerList.css';
+import '../assets/styles/BreweryList.css';
 import '../App.css';
 import { getBrewery } from '../services/api';
 import { Link } from 'react-router';
@@ -54,11 +55,11 @@ const BreweryList: React.FC = () => {
     return (
         <>
             <div className="container mt-5">
-            <h1 className="text-center custon-txt">Liste des Brasseries</h1>
-        </div> 
+                <h1 className="text-center custon-txt">Liste des Brasseries</h1>
+            </div> 
 
             {/* Bloc de filtre */}
-            <div className="container mt-5 mb-4">
+            <div className="container mt-5 mb-4 filter-brewery-mob">
                 <div className="row align-items-center justify-content-between">
                     <div className="col-md-4">
                         <input

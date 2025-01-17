@@ -50,3 +50,17 @@ p {
     border: 1px solid rgb(15, 15, 15);
     background-color: transparent;
 }
+
+.btn-login {
+    background-color: rgb(15, 15, 15); 
+    color:white;
+    padding: 8px 22px;
+    border-radius: 10px;
+    font-size: 17px;
+}
+
+.btn-login:hover {
+    border: 1px solid rgb(15, 15, 15);
+    background-color: transparent;
+    color:rgb(15, 15, 15);
+}

@@ -30,7 +30,7 @@ const HomePage: React.FC = () => {
             <div className="homepage">
                 {/* Bannière */}
                 <header className="banner d-flex align-items-center justify-content-center text-center">
-                    <div className="banner-content">
+                    <div className="banner-content mx-4">
                         <h1 className="display-4 text-white">Bienvenue dans le Monde des Bières Artisanales</h1>
                         <p className="lead text-white">
                             Découvrez, explorez et savourez les meilleures bières du monde entier.
