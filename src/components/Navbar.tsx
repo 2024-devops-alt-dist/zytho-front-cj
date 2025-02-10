@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import '../assets/styles/Navbar.css';
 import { NavLink } from 'react-router';
+import { AuthContext } from '../context/AuthContext';
 // import { NavLink } from 'react-router';
 
 const Navbar: React.FC = () => {
+    const auth = useContext(AuthContext);
+
+    // btn déconnexion
+    const handleLogout = () => {
+        if (auth && auth.logout) {
+            auth.logout(); 
+        }
+    };
+    
     return (
         <nav className="navbar navbar-expand-md custom-bg-navbar">
             <div className="container-fluid mx-5">
@@ -25,8 +35,14 @@ const Navbar: React.FC = () => {
                             Profil
                         </button>
                         <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
-                            <li><a className="dropdown-item" href="/login">Connexion</a></li>
-                            <li><a className="dropdown-item" href="/logout">Déconnexion</a></li>
+                            {!auth?.user ? (
+                                <li><NavLink to="/login" className="dropdown-item">Connexion</NavLink></li>
+                            ) : (
+                                <>
+                                    <li><NavLink to="/profil" className="dropdown-item">Profil</NavLink></li>
+                                    <li><button onClick={handleLogout} className="dropdown-item">Déconnexion</button></li>
+                                </>
+                            )}
                         </ul>
                     </div>
                 </div>

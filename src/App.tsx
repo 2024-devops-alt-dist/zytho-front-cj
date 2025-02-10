@@ -9,17 +9,18 @@ import BreweryDetails from './pages/BreweryDetails'
 import HomePage from './pages/HomePage'
 import Login from './pages/Login'
 import Registration from './pages/Registration'
+import Profil from './pages/Profil'
+import { AuthProvider } from './context/AuthContext'
 
 function App() {
   return (
     <>
+    <AuthProvider>
     <div className="page-container">
-      {/* Navbar */}
       <div>
         <Navbar />
       </div>
 
-      {/* Routes */}
       <div className="page-content">
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -29,14 +30,15 @@ function App() {
           <Route path="/breweries/:id" element={<BreweryDetails />} />
           <Route path="/login" element={<Login />} />
           <Route path="/inscription" element={<Registration />} />
+          <Route path="/profil" element={<Profil />} />
         </Routes>
       </div>
 
-      {/* Footer */}
       <div>
         <Footer />
       </div>
     </div>
+    </AuthProvider>
     </>
   )
 }
