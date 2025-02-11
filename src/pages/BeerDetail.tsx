@@ -1,14 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getBeerDetails } from '../services/api';
 import { Beer } from '../interfaces/beer';
 import '../assets/styles/Global.css';
 import '../assets/styles/BeerDetail.css';
+import { AuthContext } from '../context/AuthContext';
 
 const BeerDetails: React.FC = () => {
     const { id } = useParams<{ id: string }>();
     const [beer, setBeer] = useState<Beer | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
+    const auth = useContext(AuthContext);
 
     useEffect(() => {
         if (id) {
@@ -20,7 +22,7 @@ const BeerDetails: React.FC = () => {
         try {
             const response = await getBeerDetails(id);
             setBeer(response.data);
-            console.log(response.data);
+            //console.log(response.data);
         } catch (error) {
             console.error('Erreur lors de la récupération des détails de la bière :', error);
         } finally {
@@ -78,6 +80,12 @@ const BeerDetails: React.FC = () => {
                             {beer.brewery.name}
                         </Link>
                     </p>
+                    {/* Afficher le bouton de modification si l'utilisateur est un admin */}
+                    {auth?.user?.role === 'admin' && (
+                            <div className="d-flex justify-content-end mt-3">
+                                <Link to={`/beers/${beer.id}/edit`} className="btn btn-primary">Modifier</Link>
+                            </div>
+                        )}
                 </div>
             </div>
         </div>

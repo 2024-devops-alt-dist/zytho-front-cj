@@ -12,3 +12,7 @@ export const getBeerDetails = (id: number) => api.get<Beer>(`/beers/${id}`);
 export const getBrewery = () => api.get<Brewery[]>(`/breweries`);
 export const getBreweryDetails = (id: number) => api.get<Brewery>(`/breweries/${id}`);
 export const addUser = () => api.post<Users[]>('/users');
+
+export const updateBeer = (id: number, beer: Beer) => api.put<Beer>(`/beers/${id}`, beer);
+
+// ICI seul les info de la table "beer" se modifie, pas les infos de la table "details beer"

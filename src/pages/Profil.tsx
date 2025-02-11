@@ -12,6 +12,7 @@ const Profil = () => {
     return (
         <div>
             <h1>Bienvenue sur votre profil, {auth.user.email} !</h1>
+            <p>Votre rôle est : {auth.user.role}</p>
         </div>
     );
 };

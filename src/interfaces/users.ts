@@ -3,4 +3,5 @@ export interface Users {
     firstname: string;
     email: string;
     password: string; // minimum 8 caractères
+    role: 'admin' | 'user';
 }
