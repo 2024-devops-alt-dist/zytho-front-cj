@@ -65,7 +65,7 @@ const HomePage: React.FC = () => {
                 </div>
             </section>
 
-            <section className="py-5 bg-light">
+            {/* <section className="py-5 bg-light">
                 <div className="container text-center my-3">
                     <h2>Rejoignez notre Communauté</h2>
                     <p className="lead">Inscrivez-vous à notre newsletter pour recevoir des informations sur nos dernières bières et promotions.</p>
@@ -77,7 +77,7 @@ const HomePage: React.FC = () => {
                         </div>
                     </form>
                 </div>
-            </section>
+            </section> */}
         </>
     );
 };

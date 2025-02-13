@@ -9,6 +9,9 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 const BeerList: React.FC = () => {
     const [beers, setBeers] = useState<Beer[]>([]);
     const [filteredBeers, setFilteredBeers] = useState<Beer[]>([]);
+    const [favorites, setFavorites] = useState<number[]>(() => {
+        return JSON.parse(localStorage.getItem('favorites') || '[]');
+    });
     const [nameFilter, setNameFilter] = useState<string>('');
     const [typeFilter, setTypeFilter] = useState<string>('');
     const [originFilter, setOriginFilter] = useState<string>('');
@@ -92,6 +95,34 @@ const BeerList: React.FC = () => {
 
     const handleSuggestionClick = (beerId: number) => {
         navigate(`/beers/${beerId}`);
+    };
+
+    // Partie Favories : seul le btn coeur est fonctionnel pour le moment. Je n'arrive pas encore à faire persister les favories à la deco/reco
+    const isAuthenticated = !!localStorage.getItem('user');
+
+    // Réinitialiser les favoris lors de la déconnexion
+    useEffect(() => {
+        if (!isAuthenticated) {
+            setFavorites([]);
+            localStorage.setItem('favorites', JSON.stringify([])); // Vide le localStorage
+        }
+    }, [isAuthenticated]);
+
+    const toggleFavorite = (beerId: number) => {
+        if (!isAuthenticated) {
+            alert("Vous devez être connecté pour ajouter une bière en favori.");
+            navigate('/login');
+            return;
+        }
+
+        let updatedFavorites;
+        if (favorites.includes(beerId)) {
+            updatedFavorites = favorites.filter((id) => id !== beerId);
+        } else {
+            updatedFavorites = [...favorites, beerId];
+        }
+        setFavorites(updatedFavorites);
+        localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
     };
 
     return (
@@ -187,9 +218,14 @@ const BeerList: React.FC = () => {
                                                 {beer.details_beer?.description || 'Pas de description disponible'}
                                             </p>
                                         </div>
-                                        <Link to={`/beers/${beer.id}`} className="btn btn-one mt-3">
-                                            Voir plus
-                                        </Link>
+                                        <div className="d-flex justify-content-between align-items-center mt-3">
+                                            <Link to={`/beers/${beer.id}`} className="btn btn-one">
+                                                Voir plus
+                                            </Link>
+                                            <button className="btn " onClick={() => toggleFavorite(beer.id)}>
+                                                {favorites.includes(beer.id) ? '❤️' : '🤍'}
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

@@ -6,19 +6,19 @@ Suite à la mise en place d'une API REST pour manipuler les données sur les bi�
 ## Fonctionnalitées
 L'application dispose :
 - d'une page "Bières" : 
-  ✅ avec le catalogue de l'ensemble des bières artisanales disponible
-  ✅ possibilité de filtrer par : nom, origine et type de bière
-  ✅ la possibilité de voir le détail de chaque bière 
-  ▶️ Possibilité d'éditer ou de supprimer une bière si user authentifié comme "admin"
+  - ✅ avec le catalogue de l'ensemble des bières artisanales disponible
+  - ✅ possibilité de filtrer par : nom, origine et type de bière
+  - ✅ la possibilité de voir le détail de chaque bière 
+  - ✅ Possibilité d'éditer une bière si user authentifié comme "admin"
 
 - Un répertoire de brasseries :
-  ✅ avec la liste de l'ensemble des brasseries existante
-  ✅ fiche detail de chaque brasserie disponible + l'ensemble des bières associées à cette dernière 
-  ✅ possibilité de filtrer par : nom et pays
-  ▶️ Possibilité d'éditer une brasserie si user authentifié comme "admin"
+  - ✅ avec la liste de l'ensemble des brasseries existante
+  - ✅ fiche detail de chaque brasserie disponible + l'ensemble des bières associées à cette dernière 
+  - ✅ possibilité de filtrer par : nom et pays
 
-
-
+- Un système d'authentification avec 2 rôles : user ou admin.
+  - email: "admin@gmail.com", password: "123456789", role: 'admin'
+  - email: "user@gmail.com", password: "123456789", role: 'user'
 
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

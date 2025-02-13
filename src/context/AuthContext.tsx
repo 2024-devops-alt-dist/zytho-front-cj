@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Users } from "../interfaces/users";
 
 interface AuthContextType {
-    user: { email: string, role: 'admin' | 'user' } | null;
+    user: Users | null;
     login: (email: string, password: string) => boolean;
     logout: () => void;
 }
@@ -22,7 +22,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     const storedUser = localStorage.getItem("user");
 
     // Si user stocké dans localStorage, le définir comme l'utilisateur actuel
-    const [user, setUser] = useState<{ email: string, role: 'admin' | 'user' } | null>(
+    const [user, setUser] = useState<Users | null>(
         storedUser ? JSON.parse(storedUser) : null
     );
 
@@ -30,9 +30,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     const login = (email: string, password: string): boolean => {
         const user = hardcodedUsers.find(user => user.email === email && user.password === password);
         if (user) {
-            // Ici, on met à jour le user avec son rôle 'admin' ou 'user'
-            setUser({ email, role: user.role });
-            localStorage.setItem("user", JSON.stringify({ email, role: user.role }));
+            setUser(user); 
+            localStorage.setItem("user", JSON.stringify(user));
             navigate("/profil");
             return true;
         }
