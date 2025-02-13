@@ -1,4 +1,25 @@
-# React + TypeScript + Vite
+# ZythoFront : React + TypeScript + Vite
+
+## Context 
+Suite à la mise en place d'une API REST pour manipuler les données sur les bières, nous passons à la création d'une interface utilisateur intuitive et attrayante. Cette interface sera la vitrine de notre application et proposera une expérience fluide et agréable pour les amateurs de bières.
+
+## Fonctionnalitées
+L'application dispose :
+- d'une page "Bières" : 
+  ✅ avec le catalogue de l'ensemble des bières artisanales disponible
+  ✅ possibilité de filtrer par : nom, origine et type de bière
+  ✅ la possibilité de voir le détail de chaque bière 
+  ▶️ Possibilité d'éditer ou de supprimer une bière si user authentifié comme "admin"
+
+- Un répertoire de brasseries :
+  ✅ avec la liste de l'ensemble des brasseries existante
+  ✅ fiche detail de chaque brasserie disponible + l'ensemble des bières associées à cette dernière 
+  ✅ possibilité de filtrer par : nom et pays
+  ▶️ Possibilité d'éditer une brasserie si user authentifié comme "admin"
+
+
+
+
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
