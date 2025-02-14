@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { getBeerDetails } from '../services/api';
+import { useParams, Link, useNavigate } from 'react-router-dom';
+import { deleteBeer, getBeerDetails } from '../services/api';
 import { Beer } from '../interfaces/beer';
 import '../assets/styles/Global.css';
 import '../assets/styles/BeerDetail.css';
@@ -11,6 +11,7 @@ const BeerDetails: React.FC = () => {
     const [beer, setBeer] = useState<Beer | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
     const auth = useContext(AuthContext);
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (id) {
@@ -22,7 +23,6 @@ const BeerDetails: React.FC = () => {
         try {
             const response = await getBeerDetails(id);
             setBeer(response.data);
-            //console.log(response.data);
         } catch (error) {
             console.error('Erreur lors de la récupération des détails de la bière :', error);
         } finally {
@@ -30,6 +30,17 @@ const BeerDetails: React.FC = () => {
         }
     };
 
+    const handleDelete = async () => {
+        if (!beer) return;
+    
+        try {
+            await deleteBeer(beer); 
+            navigate('/beers');
+        } catch (error) {
+            console.error('Erreur lors de la suppression de la bière:', error);
+        }
+    };
+    
     if (loading) {
         return <p>Chargement des détails...</p>;
     }
@@ -80,12 +91,12 @@ const BeerDetails: React.FC = () => {
                             {beer.brewery.name}
                         </Link>
                     </p>
-                    {/* Afficher le bouton de modification si l'utilisateur est un admin */}
                     {auth?.user?.role === 'admin' && (
-                            <div className="d-flex justify-content-end mt-3">
-                                <Link to={`/beers/${beer.id}/edit`} className="btn btn-primary">Modifier</Link>
-                            </div>
-                        )}
+                        <div className="d-flex mt-3">
+                            <Link to={`/beers/${beer.id}/edit`} className="btn btn-three">Modifier</Link>
+                            <button onClick={handleDelete} className="btn btn-danger ml-3">Supprimer</button>
+                        </div>
+                    )}
                 </div>
             </div>
         </div>

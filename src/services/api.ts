@@ -23,13 +23,9 @@ export const getBrewery = () => api.get<Brewery[]>(`/breweries`);
 export const getBreweryDetails = (id: number) => api.get<Brewery>(`/breweries/${id}`);
 export const addUser = () => api.post<Users[]>('/users');
 
-
-// export const deleteBeer = (id: number) => {
-//     console.log(`Appel API pour supprimer la bière avec l'ID : ${id}`); // Log pour vérifier l'ID passé
-//     return api.delete(`/beers/${id}`);
-// };
-
-// export const deleteBeerDetails = (id: number) => {
-//     console.log(`Appel API pour supprimer les détails de la bière avec l'ID : ${id}`); // Log pour vérifier l'ID passé
-//     return api.delete(`/details_beer/${id}`);
-// };
+export const deleteBeer = async (beer: Beer) => {
+    if (beer.details_beer?.id) {
+        await api.delete(`/details_beer/${beer.details_beer.id}`); 
+    }
+    await api.delete(`/beers/${beer.id}`);
+};

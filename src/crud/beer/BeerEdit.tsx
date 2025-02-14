@@ -5,7 +5,6 @@ import '../../assets/styles/crud/BeerEdit.css';
 import { AuthContext } from '../../context/AuthContext';
 import { Beer } from '../../interfaces/beer';
 import { getBeerDetails, updateBeer, updateBeerDetails } from '../../services/api';
-// import { useDeleteBeer } from './BeerDelete';
 
 const BeerEdit: React.FC = () => {
     const { id } = useParams<{ id: string }>();
@@ -99,8 +98,6 @@ const BeerEdit: React.FC = () => {
         }
     };
     
-    // const handleDelete = useDeleteBeer(beer?.id ?? 0, beer?.details_beer?.id);
-
     if (loading) {
         return <p>Chargement du formulaire...</p>;
     }
@@ -180,11 +177,6 @@ const BeerEdit: React.FC = () => {
                 <button type="submit" className="btn btn-three mt-4 mb-5">Enregistrer les modifications</button>
             </form>
         </div>
-    //    <div>
-    //             <h3>Supprimer la bière</h3>
-    //             <p>Êtes-vous sûr de vouloir supprimer cette bière ainsi que ses détails ?</p>
-    //             <button onClick={handleDelete}>Supprimer</button>
-    //         </div> 
     );
 };
 

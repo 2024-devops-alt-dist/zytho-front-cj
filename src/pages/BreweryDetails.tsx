@@ -21,7 +21,6 @@ const BreweryDetails: React.FC = () => {
         try {
             const response = await getBreweryDetails(id);
             setBrewery(response.data); 
-            console.log("1-brasserie infos", response.data);
         } catch (error) {
             console.error('Erreur lors de la récupération des détails de la brasserie :', error);
         } finally {
