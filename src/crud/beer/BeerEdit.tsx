@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import '../../assets/styles/Global.css';
 import '../../assets/styles/crud/BeerEdit.css';
-import { AuthContext } from '../../context/AuthContext';
 import { Beer } from '../../interfaces/beer';
 import { getBeerDetails, updateBeer, updateBeerDetails } from '../../services/api';
 
@@ -11,7 +10,7 @@ const BeerEdit: React.FC = () => {
     const navigate = useNavigate();
     const [beer, setBeer] = useState<Beer | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
-    const auth = useContext(AuthContext); 
+
 
     useEffect(() => {
         if (id) {

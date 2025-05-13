@@ -4,8 +4,10 @@ import { Brewery } from '../interfaces/brewery';
 import { Users } from '../interfaces/users';
 import { DetailsBeer } from '../interfaces/details_beer';
 
+const API_URL = import.meta.env.VITE_API_URL + '/api/v1';
+
 const api = axios.create({
-    baseURL: 'http://localhost:3000/api/v1', 
+    baseURL: API_URL, 
 });
 
 export const getBeers = () => api.get<Beer[]>('/beers');

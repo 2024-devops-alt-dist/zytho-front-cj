@@ -10,6 +10,7 @@ const BreweryDetails: React.FC = () => {
     const { id } = useParams<{ id: string }>();
     const [brewery, setBrewery] = useState<Brewery | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
+    const URL_FRONT = import.meta.env.FRONT_URL;
 
     useEffect(() => {
         if (id) {
@@ -53,21 +54,21 @@ const BreweryDetails: React.FC = () => {
                         <div className="carousel-inner">
                             <div className="carousel-item active">
                                 <img 
-                                    src="http://localhost:5173/src/assets/pictures/brasseriePicture1.jpg" 
+                                    src={URL_FRONT +"/src/assets/pictures/brasseriePicture1.jpg"} 
                                     alt={`${brewery.name}`} 
                                     className="d-block w-100 img-fluid rounded"
                                 />
                             </div>
                             <div className="carousel-item">
                                 <img 
-                                    src="http://localhost:5173/src/assets/pictures/brasseriePicture1.jpg" 
+                                    src={URL_FRONT +"/src/assets/pictures/brasseriePicture1.jpg"} 
                                     alt={`${brewery.name}`} 
                                     className="d-block w-100 img-fluid rounded"
                                 />
                             </div>
                             <div className="carousel-item">
                                 <img 
-                                    src="http://localhost:5173/src/assets/pictures/brasseriePicture1.jpg" 
+                                    src={URL_FRONT +"/src/assets/pictures/brasseriePicture1.jpg"} 
                                     alt={`${brewery.name}`} 
                                     className="d-block w-100 img-fluid rounded"
                                 />
@@ -107,7 +108,7 @@ const BreweryDetails: React.FC = () => {
                     {brewery.beers.map((beer) => (
                         <div key={beer.id} className="card card-custom h-100 beer-card">
                             <img
-                                src="http://localhost:5173/src/assets/pictures/beersPicture1.jpg"
+                                src="/src/assets/pictures/beersPicture1.jpg"
                                 alt={beer.name}
                                 className="card-img-top"
                             />

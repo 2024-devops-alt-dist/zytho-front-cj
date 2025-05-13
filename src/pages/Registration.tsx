@@ -11,6 +11,7 @@ const Registration: React.FC = () => {
     const [confirmPassword, setConfirmPassword] = useState("");
     const [message, setMessage] = useState("");
     const [messageType, setMessageType] = useState("");
+    const API_URL = import.meta.env.VITE_API_URL + '/api/v1';
 
     // Fonction pour gérer l'envoi du formulaire
     const handleSubmit = async (e: React.FormEvent) => {
@@ -23,7 +24,7 @@ const Registration: React.FC = () => {
         }
 
         try {
-            const { data } = await axios.post("http://localhost:3000/api/v1/users", {
+            const { data } = await axios.post(API_URL + "/users", {
                 firstname,
                 email,
                 password,

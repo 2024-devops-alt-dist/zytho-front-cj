@@ -12,6 +12,7 @@ const BeerDetails: React.FC = () => {
     const [loading, setLoading] = useState<boolean>(true);
     const auth = useContext(AuthContext);
     const navigate = useNavigate();
+    const URL_FRONT = import.meta.env.FRONT_URL;
 
     useEffect(() => {
         if (id) {
@@ -58,7 +59,7 @@ const BeerDetails: React.FC = () => {
             <div className="row justify-content-between mb-cust px-5 info-beer-mob" >
                 <div className="col-lg-6 " >
                     <img 
-                        src="http://localhost:5173/src/assets/pictures/beersPicture1.jpg" 
+                        src={URL_FRONT + "/src/assets/pictures/beersPicture1.jpg"}
                         alt={beer.name} 
                         className="img-fluid rounded"
                     />
