@@ -54,21 +54,21 @@ const BreweryDetails: React.FC = () => {
                         <div className="carousel-inner">
                             <div className="carousel-item active">
                                 <img 
-                                    src={URL_FRONT +"/assets/pictures/brasseriePicture1.jpg"} 
+                                    src="/assets/pictures/brasseriePicture1.jpg"
                                     alt={`${brewery.name}`} 
                                     className="d-block w-100 img-fluid rounded"
                                 />
                             </div>
                             <div className="carousel-item">
                                 <img 
-                                    src={URL_FRONT +"/assets/pictures/brasseriePicture1.jpg"} 
+                                    src="/assets/pictures/brasseriePicture1.jpg"
                                     alt={`${brewery.name}`} 
                                     className="d-block w-100 img-fluid rounded"
                                 />
                             </div>
                             <div className="carousel-item">
                                 <img 
-                                    src={URL_FRONT +"/assets/pictures/brasseriePicture1.jpg"} 
+                                    src="/assets/pictures/brasseriePicture1.jpg" 
                                     alt={`${brewery.name}`} 
                                     className="d-block w-100 img-fluid rounded"
                                 />
