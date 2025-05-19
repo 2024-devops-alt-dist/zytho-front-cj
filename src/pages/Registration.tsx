@@ -145,7 +145,7 @@ const Registration: React.FC = () => {
 
             {/* Bloc gauche */}
             <div className="left-block d-none-img">
-                <img src="src/assets/pictures/picturebeer2.jpg" alt="Background" className="image" />
+                <img src="/assets/pictures/picturebeer2.jpg" alt="Background" className="image" />
                 <div className="overlay"></div>
             </div>
         </div>

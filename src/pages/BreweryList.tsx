@@ -96,7 +96,7 @@ const BreweryList: React.FC = () => {
                             <div key={brewery.id} className="col-12 col-lg-4 mb-4 d-flex justify-content-center">
                                 <div className="card h-100">
                                     <img
-                                        src="src/assets/pictures/brasseriePicture1.jpg"
+                                        src="/assets/pictures/brasseriePicture1.jpg"
                                         alt={brewery.name}
                                         className="card-img-top"
                                     />

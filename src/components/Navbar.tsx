@@ -6,7 +6,6 @@ import { AuthContext } from '../context/AuthContext';
 
 const Navbar: React.FC = () => {
     const auth = useContext(AuthContext);
-    const URL_FRONT = import.meta.env.FRONT_URL;
 
     // btn déconnexion
     const handleLogout = () => {
@@ -18,7 +17,7 @@ const Navbar: React.FC = () => {
     return (
         <nav className="navbar navbar-expand-md custom-bg-navbar">
             <div className="container-fluid mx-5">
-                <img className="logo-custom" src={URL_FRONT + "/src/assets/pictures/zythoLogo.png"}/>
+                <img className="logo-custom" src="/assets/pictures/zythoLogo.png"/>
 
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>

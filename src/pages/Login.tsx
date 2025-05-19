@@ -26,7 +26,7 @@ const Login: React.FC = () => {
         <div className="contact-form-container d-flex">
             {/* Bloc gauche */}
             <div className="left-block d-none-img">
-                <img src="src/assets/pictures/picturebeer.jpg" alt="Background" className="image" />
+                <img src="/assets/pictures/picturebeer.jpg" alt="Background" className="image" />
                 <div className="overlay"></div>
             </div>
 

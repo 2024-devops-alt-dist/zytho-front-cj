@@ -203,7 +203,7 @@ const BeerList: React.FC = () => {
                             <div key={beer.id} className="col-12 col-md-4 mb-4 d-flex justify-content-center">
                                 <div className="card h-100">
                                     <img
-                                        src="src/assets/pictures/beersPicture1.jpg"
+                                        src="/assets/pictures/beersPicture1.jpg"
                                         alt={beer.name}
                                         className="card-img-top"
                                     />
