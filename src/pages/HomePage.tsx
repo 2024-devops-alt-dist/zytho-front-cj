@@ -54,7 +54,7 @@ const HomePage: React.FC = () => {
                             {types.map((type, index) => (
                                 <Link key={index} to={`/beers?category=${type}`} className="category-card-link">
                                     <div className="category-card me-3">
-                                        <div className="card-img-container" style={{ backgroundImage: `url('src/assets/pictures/bannerpicture2.jpg')` }}>
+                                        <div className="card-img-container" style={{ backgroundImage: `url('/assets/pictures/bannerpicture2.jpg')` }}>
                                             <div className="card-overlay">
                                                 <h5 className="card-title custom-title-color">{type}</h5>
                                             </div>
