@@ -54,21 +54,21 @@ const BreweryDetails: React.FC = () => {
                         <div className="carousel-inner">
                             <div className="carousel-item active">
                                 <img 
-                                    src={URL_FRONT +"/src/assets/pictures/brasseriePicture1.jpg"} 
+                                    src={URL_FRONT +"/assets/pictures/brasseriePicture1.jpg"} 
                                     alt={`${brewery.name}`} 
                                     className="d-block w-100 img-fluid rounded"
                                 />
                             </div>
                             <div className="carousel-item">
                                 <img 
-                                    src={URL_FRONT +"/src/assets/pictures/brasseriePicture1.jpg"} 
+                                    src={URL_FRONT +"/assets/pictures/brasseriePicture1.jpg"} 
                                     alt={`${brewery.name}`} 
                                     className="d-block w-100 img-fluid rounded"
                                 />
                             </div>
                             <div className="carousel-item">
                                 <img 
-                                    src={URL_FRONT +"/src/assets/pictures/brasseriePicture1.jpg"} 
+                                    src={URL_FRONT +"/assets/pictures/brasseriePicture1.jpg"} 
                                     alt={`${brewery.name}`} 
                                     className="d-block w-100 img-fluid rounded"
                                 />
@@ -108,7 +108,7 @@ const BreweryDetails: React.FC = () => {
                     {brewery.beers.map((beer) => (
                         <div key={beer.id} className="card card-custom h-100 beer-card">
                             <img
-                                src="/src/assets/pictures/beersPicture1.jpg"
+                                src="/assets/pictures/beersPicture1.jpg"
                                 alt={beer.name}
                                 className="card-img-top"
                             />
