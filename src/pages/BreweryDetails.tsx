@@ -10,7 +10,6 @@ const BreweryDetails: React.FC = () => {
     const { id } = useParams<{ id: string }>();
     const [brewery, setBrewery] = useState<Brewery | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
-    const URL_FRONT = import.meta.env.FRONT_URL;
 
     useEffect(() => {
         if (id) {
