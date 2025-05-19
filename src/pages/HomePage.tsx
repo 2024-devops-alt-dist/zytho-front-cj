@@ -8,6 +8,8 @@ const HomePage: React.FC = () => {
     // État pour les types de bières
     const [types, setTypes] = useState<string[]>([]);
     const [error, setError] = useState<string | null>(null);
+    const URL_FRONT = import.meta.env.FRONT_URL;
+    const imagePath = `${URL_FRONT}/src/assets/pictures/bannerpicture3.jpg`;
 
     useEffect(() => {
         fetchBeerTypes();
@@ -28,19 +30,30 @@ const HomePage: React.FC = () => {
     return (
         <>
             <div className="homepage">
-                {/* Bannière */}
-                <header className="banner d-flex align-items-center justify-content-center text-center">
-                    <div className="banner-content mx-4">
-                        <h1 className="display-4 text-white">Bienvenue dans le Monde des Bières Artisanales</h1>
-                        <p className="lead text-white">
-                            Découvrez, explorez et savourez les meilleures bières du monde entier.
-                        </p>
-                        <Link to="/beers" className="btn btn-two mt-5">
-                            Découvrir les Bières {">"}
-                        </Link>
-                    </div>
-                </header>
+        {/* Bannière */}
+        <header
+            className="banner d-flex align-items-center justify-content-center text-center"
+            style={{
+                backgroundImage: `url(${imagePath})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                height: '87vh',
+                width: '100%',
+                position: 'relative',
+                overflow: 'hidden',
+            }}
+        >
+            <div className="banner-content mx-4">
+            <h1 className="display-4 text-white">Bienvenue dans le Monde des Bières Artisanales</h1>
+            <p className="lead text-white">
+                Découvrez, explorez et savourez les meilleures bières du monde entier.
+            </p>
+            <Link to="/beers" className="btn btn-two mt-5">
+                Découvrir les Bières {">"}
+            </Link>
             </div>
+        </header>
+        </div>
 
             <section className="categories py-5">
                 <div className="mx-5 px-5">

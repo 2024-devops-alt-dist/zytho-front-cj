@@ -1,4 +1,4 @@
-.banner {
+/* .banner {
     position: relative;
     width: 100%;
     height: 87vh; 
@@ -6,7 +6,7 @@
     background-size: cover;
     background-position: center;
     overflow: hidden;
-}
+} */
 
 .banner::before {
     content: '';
